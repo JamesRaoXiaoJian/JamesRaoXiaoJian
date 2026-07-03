@@ -15,13 +15,9 @@ I work on robotics, embodied AI, multimodal perception, and engineering tools th
 - Unitree G1 motion playback, MuJoCo simulation, and sim-to-real control workflows
 - AI tools, automation scripts, and interactive applications
 
-## Featured Work
+## Pinned Repositories
 
 ### Robotics & Embodied AI
-
-**TransVTLA**
-
-An ongoing research project for transparent and tactile Vision-Language-Action learning. It explores how 2D vision, 3D point clouds, tactile signals, robot states, and language instructions can be fused into a unified action model for robotic manipulation, including MLA/OpenVLA-style model adaptation, diffusion and autoregressive action prediction, multimodal alignment, future perception prediction, and training data pipelines.
 
 [**TransVTLA-RealDataCollect**](https://github.com/JamesRaoXiaoJian/TransVTLA-RealDataCollect)
 
@@ -31,9 +27,13 @@ A real-robot multimodal data engineering toolkit for robotic arm experiments. It
 
 A Unitree G1 motion replay tool built around CSV motion execution. It uses Unitree SDK DDS topics for `rt/arm_sdk` control, includes a FastAPI replay interface, and adds transition logic such as nearest-window entry/exit selection and velocity clamping.
 
+[**g1_mujoco_sim**](https://github.com/JamesRaoXiaoJian/g1_mujoco_sim)
+
+A lightweight Unitree G1 MuJoCo motion preview tool for replaying LAFAN1-retargeted CSV joint trajectories before real-robot execution, with position replay, PD torque mode, speed scaling, looping, and lower-body locking.
+
 [**unitree_mujoco**](https://github.com/JamesRaoXiaoJian/unitree_mujoco)
 
-A MuJoCo + Unitree SDK2 simulation environment for low-level robot control verification and sim-to-real development. My work around this stack focuses on G1 motion experiments, SDK integration, and practical debugging workflows.
+A MuJoCo + Unitree SDK2 simulation environment for low-level robot control verification and sim-to-real development. This fork adds G1 low-level simulation, `rt/secondary_imu`, `rt/arm_sdk` weight blending, and G1 keyframe playback utilities.
 
 ### Multimodal AI & Interactive Systems
 
@@ -44,6 +44,12 @@ An intelligent campus safety monitoring system combining person detection, multi
 [**SV_Soul**](https://github.com/JamesRaoXiaoJian/SV_Soul)
 
 An AI-powered NPC system for Stardew Valley, designed around character personas, persistent memory, real-time game context, and more natural in-game dialogue.
+
+## Other Work
+
+**TransVTLA**
+
+An ongoing research project for transparent and tactile Vision-Language-Action learning. It explores how 2D vision, 3D point clouds, tactile signals, robot states, and language instructions can be fused into a unified action model for robotic manipulation, including MLA/OpenVLA-style model adaptation, diffusion and autoregressive action prediction, multimodal alignment, future perception prediction, and training data pipelines.
 
 ### Web & Practical Tools
 
