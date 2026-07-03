@@ -1,16 +1,19 @@
-## Hi there 👋
+# Hi, I'm 你的名字
 
-<!--
-**JamesRaoXiaoJian/JamesRaoXiaoJian** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm interested in AI, full-stack development, and open source.
 
-Here are some ideas to get you started:
+## Tech Stack
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Python · JavaScript · TypeScript · React · Node.js · Git · Linux
+
+## Featured Projects
+
+- [项目1](链接) - 简短介绍这个项目做了什么
+- [项目2](链接) - 简短介绍你的技术亮点
+
+## Contact
+
+- Email: your-email@example.com
+- Blog: https://your-blog.com
+
+之后你只要继续改这个特殊仓库里的 README.md，主页就会跟着变。
