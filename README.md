@@ -1,19 +1,82 @@
-# Hi, I'm 你的名字
+# Hi, I'm James
 
-I'm interested in AI, full-stack development, and open source.
+I'm Rao Xiaojian (饶小建), a Computer Science and Technology student at Shenzhen University.
+
+I work on robotics, embodied AI, multimodal perception, and practical tools that connect research code with real-world systems.
+
+## Current Focus
+
+- Vision-Language-Action models for robotic manipulation
+- Real-world multimodal data collection with RGB-D, tactile/pressure, robot state, and gripper signals
+- Unitree G1 motion playback, MuJoCo simulation, and sim-to-real control workflows
+- AI applications, automation tools, and interactive systems
+
+## Featured Work
+
+### Robotics & Embodied AI
+
+**TransVTLA**
+
+An active research workspace for transparent and tactile Vision-Language-Action learning. The project explores how 2D vision, 3D point clouds, tactile signals, robot states, and language instructions can be fused into a unified action model for robotic manipulation. It includes MLA/OpenVLA-style model adaptation, diffusion and autoregressive action prediction, multimodal alignment, and RLDS-style training data pipelines.
+
+[**TransVTLA-RealDataCollect**](https://github.com/JamesRaoXiaoJian/TransVTLA-RealDataCollect)
+
+A real-robot multimodal data engineering toolkit for robotic arm experiments. It covers dual RealSense RGB-D capture, tactile/pressure sensing, robot and gripper state logging, offline replay, dataset auditing, cleaning, task splitting, and RLDS/TFDS export.
+
+[**G1 Motion Player**](https://github.com/JamesRaoXiaoJian/g1_motion_player)
+
+A Unitree G1 motion replay tool built around CSV motion execution. It uses Unitree SDK DDS topics for `rt/arm_sdk` control, includes a FastAPI replay interface, and adds transition logic such as nearest-window entry/exit selection and velocity clamping.
+
+[**unitree_mujoco**](https://github.com/JamesRaoXiaoJian/unitree_mujoco)
+
+A MuJoCo + Unitree SDK2 simulation environment for low-level robot control verification and sim-to-real development. My work around this stack focuses on G1 motion experiments, SDK integration, and practical debugging workflows.
+
+### Multimodal AI & Interactive Systems
+
+[**SafeSentinel**](https://github.com/JamesRaoXiaoJian/safesentinel)
+
+An intelligent campus safety monitoring system combining person detection, multi-object tracking, action recognition, and vision-language risk analysis. The stack includes YOLO11, BoT-SORT/ByteTrack, S3D action recognition, PyTorch Lightning, and Qwen-style VLM analysis.
+
+[**SV_Soul**](https://github.com/JamesRaoXiaoJian/SV_Soul)
+
+An AI-powered NPC system for Stardew Valley, designed around character personas, persistent memory, real-time game context, and more natural in-game dialogue.
+
+### Web & Practical Tools
+
+[**FRPWatch**](https://github.com/JamesRaoXiaoJian/FRPWatch)
+
+A lightweight monitoring tool for FRP proxy nodes, with regular status checks and email alerts when a node goes offline.
+
+[**Flexible-Electronics-Cup**](https://github.com/JamesRaoXiaoJian/Flexible-Electronics-Cup)
+
+A website interface for the Flexible Electronics Cup.
+
+[**volunteer-hours-ranking**](https://github.com/JamesRaoXiaoJian/volunteer-hours-ranking)
+
+A small JavaScript project for volunteer-hours ranking and display.
 
 ## Tech Stack
 
-Python · JavaScript · TypeScript · React · Node.js · Git · Linux
+**Languages**
 
-## Featured Projects
+Python · C++ · C# · JavaScript · HTML/CSS
 
-- [项目1](链接) - 简短介绍这个项目做了什么
-- [项目2](链接) - 简短介绍你的技术亮点
+**AI & Robotics**
 
-## Contact
+PyTorch · OpenVLA/MLA · MuJoCo · RLBench · RealSense · RLDS/TFDS · YOLO · Vision-Language Models
 
-- Email: your-email@example.com
-- Blog: https://your-blog.com
+**Engineering**
 
-之后你只要继续改这个特殊仓库里的 README.md，主页就会跟着变。
+FastAPI · CMake · Linux · Git · data pipelines · model training/evaluation scripts
+
+## GitHub Stats
+
+<p>
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=JamesRaoXiaoJian&show_icons=true&hide_border=true" alt="JamesRaoXiaoJian's GitHub stats" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JamesRaoXiaoJian&layout=compact&hide_border=true" alt="Top languages" />
+</p>
+
+## Connect
+
+- GitHub: [@JamesRaoXiaoJian](https://github.com/JamesRaoXiaoJian)
+- Location: Shenzhen, China
