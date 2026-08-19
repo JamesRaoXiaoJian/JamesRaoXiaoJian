@@ -6,14 +6,31 @@
 
 你好，我是 James，中文名饶小建，目前就读于深圳大学计算机科学与技术专业。
 
-我关注机器人、具身智能、多模态感知，以及把研究代码落到真实系统中的工程工具。近期工作主要围绕 Vision-Language-Action、真机多模态数据采集、Unitree G1 运动控制和 AI 应用开发展开。
+我关注机器人、具身智能与多模态感知，尤其是如何把策略模型可靠地部署到真实机器人上。近期工作主要围绕 Unitree G1、Piper-X、灵巧手运动重定向、真机数据工程，以及 Vision-Language-Action 策略的仿真与实机评估展开。
+
+`人手 / RGB-D / 机器人状态 → 重定向与数据集 → ACT / SmolVLA / π0.5 → 仿真评估 → Piper-X / Unitree G1 真机`
 
 ## 当前关注
 
-- 面向机器人操作的 Vision-Language-Action 模型
-- RGB-D、触觉/压力、机械臂状态、夹爪状态等真机多模态数据采集与对齐
-- Unitree G1 动作回放、MuJoCo 仿真和 sim-to-real 控制流程
-- AI 工具、自动化脚本和交互式应用
+- Unitree G1 机械臂与灵巧手的 28-DoF 策略推理和安全实机评估
+- Piper-X 双 RGB-D 数据采集、安全回放、LeRobot v3 转换与 π0.5 实时推理
+- 基于人手输入的 LEAP Hand / Allegro Hand 运动重定向与模仿学习
+- RGB-D、触觉/压力、机械臂状态和夹爪状态等真机多模态数据采集与对齐
+- MuJoCo、Isaac Lab、ROS 2 与 Unitree SDK2 驱动的 sim-to-real 工具链
+
+## 最近项目
+
+[**sim2real_g1**](https://github.com/JamesRaoXiaoJian/sim2real_g1) · 持续开发
+
+面向 Unitree G1 的自包含 Sim2Real 推理与评估流水线，统一支持 ACT、SmolVLA 和 π0.5 的 28-DoF 双臂与灵巧手控制。项目覆盖纯仿真、纯真机、仿真驱真机和真机驱仿真四种模式，并提供带速度限制、跟踪误差检测、渐进权重加载和安全回位的实机控制桥。
+
+**sim2real_piper** · 私有仓库 · 持续开发
+
+面向 Piper-X 六轴机械臂的真机数据采集、回放与策略部署工作区，统一管理 ROS 2 Humble / CAN 控制服务、主视角与腕部双 Orbbec DaBai DC1 RGB-D、rosbag2 / H.265 / LeRobot v3 数据链路、安全轨迹回放和 π0.5 实时推理。
+
+[**LEAP-DexRetarget**](https://github.com/JamesRaoXiaoJian/LEAP-DexRetarget) · Phase 0
+
+面向 LEAP Hand 的人手运动重定向与模仿学习项目，计划打通“人手关键点 → dex-retargeting → 关节目标 → 仿真回放 → episode 数据 → ACT 训练与评估”的完整闭环。当前已完成 MuJoCo、CUDA/PyTorch、LEAP/Allegro 模型和 vector retargeting 关节映射的基础环境验证。
 
 ## 主页 Pinned 仓库
 
@@ -25,7 +42,7 @@
 
 [**G1 Motion Player**](https://github.com/JamesRaoXiaoJian/g1_motion_player)
 
-Unitree G1 动作回放工具，围绕 CSV 动作执行链路构建。项目通过 Unitree SDK DDS 话题向 `rt/arm_sdk` 下发动作，提供 FastAPI 回放接口，并加入 nearest-window 入口/退出选择和速度钳位等过渡策略。
+Unitree G1 CSV 动作回放工具，提供 ROS 2 Foxy Docker、原生 Unitree SDK2 C++ 和 FastAPI 三种入口。ROS 2 执行链加入状态新鲜度、关节跟踪误差、重复 publisher 与控制周期超时等运行时安全监测，并保留 nearest-window 入口/退出选择和速度钳位等过渡策略。
 
 [**g1_mujoco_sim**](https://github.com/JamesRaoXiaoJian/g1_mujoco_sim)
 
@@ -73,11 +90,11 @@ Python · C++ · C# · JavaScript · HTML/CSS
 
 **AI & Robotics**
 
-PyTorch · OpenVLA/MLA · MuJoCo · RLBench · RealSense · RLDS/TFDS · YOLO · Vision-Language Models
+PyTorch · ACT · SmolVLA · π0.5 · OpenVLA/MLA · MuJoCo · Isaac Lab/Isaac Sim · LeRobot · dex-retargeting · RealSense · Orbbec RGB-D · RLDS/TFDS · YOLO
 
 **工程工具**
 
-FastAPI · CMake · Linux · Git · data pipelines · model training/evaluation scripts
+ROS 2 · Unitree SDK2 · DDS · ZMQ · SocketCAN · rosbag2 · FastAPI · Docker · CMake · Linux · Git · data pipelines · model training/evaluation scripts
 
 ## 联系
 
