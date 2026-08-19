@@ -6,14 +6,31 @@
 
 Hi, I'm James. My Chinese name is Rao Xiaojian (饶小建), and I am studying Computer Science and Technology at Shenzhen University.
 
-I work on robotics, embodied AI, multimodal perception, and engineering tools that connect research code with real-world systems. My recent work focuses on Vision-Language-Action models, real-robot multimodal data collection, Unitree G1 motion control, and AI applications.
+I work on robotics, embodied AI, and multimodal perception, with a particular interest in deploying policy models reliably on real robots. My recent work focuses on Unitree G1, Piper-X, dexterous-hand motion retargeting, real-robot data engineering, and simulation-to-real evaluation of Vision-Language-Action policies.
+
+`Human motion / RGB-D / robot state → retargeting and datasets → ACT / SmolVLA / π0.5 → simulation evaluation → real Piper-X / Unitree G1`
 
 ## Current Focus
 
-- Vision-Language-Action models for robotic manipulation
+- 28-DoF policy inference and safety-aware real-robot evaluation for Unitree G1 arms and dexterous hands
+- Dual-RGB-D data collection, safe replay, LeRobot v3 conversion, and real-time π0.5 inference for Piper-X
+- Human-motion retargeting and imitation learning for LEAP Hand and Allegro Hand
 - Real-world multimodal data collection with RGB-D, tactile/pressure, robot state, and gripper signals
-- Unitree G1 motion playback, MuJoCo simulation, and sim-to-real control workflows
-- AI tools, automation scripts, and interactive applications
+- Sim-to-real tooling built around MuJoCo, Isaac Lab, ROS 2, and Unitree SDK2
+
+## Recent Projects
+
+[**sim2real_g1**](https://github.com/JamesRaoXiaoJian/sim2real_g1) · Active development
+
+A self-contained Sim2Real inference and evaluation pipeline for Unitree G1, with unified 28-DoF arm and dexterous-hand control for ACT, SmolVLA, and π0.5. It supports simulation-only, real-only, simulation-to-real, and real-to-simulation modes, backed by a safety bridge with velocity limits, tracking-error checks, gradual weight handoff, and controlled return-to-ready behavior.
+
+**sim2real_piper** · Private repository · Active development
+
+A real-robot data collection, replay, and policy-deployment workspace for the six-axis Piper-X arm. It unifies ROS 2 Humble and CAN control, main-view and wrist-mounted Orbbec DaBai DC1 RGB-D cameras, rosbag2/H.265/LeRobot v3 data pipelines, safety-checked trajectory replay, and real-time π0.5 inference.
+
+[**LEAP-DexRetarget**](https://github.com/JamesRaoXiaoJian/LEAP-DexRetarget) · Phase 0
+
+A human-hand motion retargeting and imitation-learning project for LEAP Hand. The planned pipeline spans human keypoints, dex-retargeting, joint targets, simulation replay, episode data, and ACT training and evaluation. Phase 0 has verified MuJoCo, CUDA/PyTorch, the LEAP/Allegro models, and vector-retargeting joint mappings.
 
 ## Pinned Repositories
 
@@ -25,7 +42,7 @@ A real-robot multimodal data engineering toolkit for robotic arm experiments. It
 
 [**G1 Motion Player**](https://github.com/JamesRaoXiaoJian/g1_motion_player)
 
-A Unitree G1 motion replay tool built around CSV motion execution. It uses Unitree SDK DDS topics for `rt/arm_sdk` control, includes a FastAPI replay interface, and adds transition logic such as nearest-window entry/exit selection and velocity clamping.
+A Unitree G1 CSV motion replay tool with three entry points: ROS 2 Foxy in Docker, native Unitree SDK2 C++, and FastAPI. The ROS 2 path adds runtime checks for state freshness, joint tracking error, duplicate publishers, and control-loop timeouts, while retaining nearest-window entry/exit selection and velocity-clamped transitions.
 
 [**g1_mujoco_sim**](https://github.com/JamesRaoXiaoJian/g1_mujoco_sim)
 
@@ -73,11 +90,11 @@ Python · C++ · C# · JavaScript · HTML/CSS
 
 **AI & Robotics**
 
-PyTorch · OpenVLA/MLA · MuJoCo · RLBench · RealSense · RLDS/TFDS · YOLO · Vision-Language Models
+PyTorch · ACT · SmolVLA · π0.5 · OpenVLA/MLA · MuJoCo · Isaac Lab/Isaac Sim · LeRobot · dex-retargeting · RealSense · Orbbec RGB-D · RLDS/TFDS · YOLO
 
 **Engineering**
 
-FastAPI · CMake · Linux · Git · data pipelines · model training/evaluation scripts
+ROS 2 · Unitree SDK2 · DDS · ZMQ · SocketCAN · rosbag2 · FastAPI · Docker · CMake · Linux · Git · data pipelines · model training/evaluation scripts
 
 ## Connect
 
